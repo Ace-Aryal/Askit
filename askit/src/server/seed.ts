@@ -25,7 +25,7 @@ export async function getOrCreateDb() {
             console.log("error creating db or collections")
             console.error(error)
         }
-        console.log("db connection failed")
+        console.log("db connection failed ")
         console.error(error)
     }
     return database

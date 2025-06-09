@@ -21,7 +21,7 @@ export const createOrgetBucket = async () => {
             console.error("failed to create bucket")
             console.error(error)
         }
-        console.error("failed to connect to bucket")
+        console.error("failed to connect to bucket or bucket doesnt exist")
         console.error(error)
     }
 }

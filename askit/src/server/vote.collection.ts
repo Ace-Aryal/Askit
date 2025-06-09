@@ -10,13 +10,13 @@ export const createVotesCollection = async () => {
         Permission.update("users"),
         Permission.delete("users"),
     ])
-    console.log("qn collection created")
+    console.log("votes collection created")
     await Promise.all([
         database.createStringAttribute(db, voteCollection, "typeId", 128, true),
         database.createEnumAttribute(db, voteCollection, "voteStatus", ["upvoted", "downvoted"], true),
         database.createStringAttribute(db, voteCollection, "voterId", 64, true),
         database.createEnumAttribute(db, voteCollection, "type", ["question", "answer"], true),
     ])
-    console.log("attributes created")
+    console.log("votes attributes created")
 
 }

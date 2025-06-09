@@ -10,13 +10,13 @@ export const createAnswerCollection = async () => {
         Permission.update("users"),
         Permission.delete("users"),
     ])
-    console.log("qn collection created")
+    console.log("ans collection created")
 
     await Promise.all([
         database.createStringAttribute(db, answerCollection, "content", 10000, true),
         database.createStringAttribute(db, answerCollection, "authorId", 64, true),
         database.createStringAttribute(db, answerCollection, "questionId", 128, true),
     ])
-    console.log("attributes created")
+    console.log("ans attributes created")
 
 }
