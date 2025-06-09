@@ -1,0 +1,6 @@
+export const db = "main-askit"
+export const questionCollection = "questions"
+export const answerCollection = "answers"
+export const commemtCollection = "commemts"
+export const voteCollection = "votes"
+export const questionsAttachmentBucket = "questions-attachment"
