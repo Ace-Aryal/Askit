@@ -5,7 +5,7 @@ import { persist } from "zustand/middleware";
 import { AppwriteException, ID, Models } from "appwrite";
 import { account } from "@/client/config";
 
-type UserPrefs = {
+export type UserPrefs = {
     reputation: number
 }
 

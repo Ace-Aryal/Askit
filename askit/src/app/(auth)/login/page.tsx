@@ -11,7 +11,7 @@ import { showErrorToast, showSuccessToast } from "@/components/atoms/toast"
 // // import { signup } from "./signup"
 // import { authType } from ".."
 
-export default function SignupForm() {
+export default function SigninForm() {
     // const initialState: authType = {
     //     username: "",
     //     email: "",
@@ -27,13 +27,14 @@ export default function SignupForm() {
     // }
 
     // const [state, formAction, isPending] = useActionState(signup, initialState)
-    const { login } = useAuthStore()
+    const { login, logout } = useAuthStore()
     const handleLogin = async (data: {
         email: string,
         password: string
     }
     ) => {
         console.log(data)
+        await logout() // accidental bug protection
         const { email, password } = data
         try {
             const response = await login(email, password)
